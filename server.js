@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  originWhitelist: ['https://iraffle.live', 'https://irafflevip.tk', 'https://iraffletv.nl', 'https://irafflevip.lat', 'https://ferceris.boutique/'],
+  originWhitelist: ['https://iraffle.live', 'https://irafflevip.tk', 'https://iraffletv.nl', 'https://irafflevip.lat', 'https://ferceris.boutique'],
   requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
