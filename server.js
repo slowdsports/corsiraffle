@@ -22,7 +22,7 @@ var checkRateLimit = require('./lib/rate-limit')(process.env.CORSANYWHERE_RATELI
 var cors_proxy = require('./lib/cors-anywhere');
 cors_proxy.createServer({
   originBlacklist: originBlacklist,
-  originWhitelist: ['https://irtvhn.info', 'https://burotypt.golf', 'https://irsp.000webhostapp.com'],
+  originWhitelist: ['https://irtvhn.info', 'https://burotypt.golf', 'http://127.0.0.1', 'http://localhost', '127.0.0.1', 'localhost],
   requireHeader: ['origin', 'x-requested-with'],
   checkRateLimit: checkRateLimit,
   removeHeaders: [
